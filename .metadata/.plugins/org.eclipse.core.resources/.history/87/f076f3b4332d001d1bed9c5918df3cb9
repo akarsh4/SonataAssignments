@@ -1,0 +1,20 @@
+package com.Assignments.Day4;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class EMplooyt {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+List<Employee> ep = new ArrayList<>();
+ep.add(new Employee(14,50000,"Akarsh"));
+ep.add(new Employee(12,45000,"GAgan"));
+
+
+Collections.sort(ep,(e1,e2)->e1.getSalary()-e2.getSalary());
+ep.forEach(System.out::println);
+
+}
+}

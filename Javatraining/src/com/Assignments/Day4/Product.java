@@ -1,6 +1,6 @@
 package com.Assignments.Day4;
 
-public class Product {
+public class Product implements Comparable<Product>{
 int proId;
 String proName;
 int proPrize;
@@ -30,7 +30,12 @@ public void setProName(String proName) {
 }
 
 public int getProPrize() {
-	return proPrize;
+	if(this.proPrize<=0) {
+		return this.proPrize*0;
+	}
+	else
+	return -1;
+	
 }
 
 public void setProPrize(int proPrize) {
@@ -41,6 +46,15 @@ public void setProPrize(int proPrize) {
 public String toString() {
 	return "Product [proId=" + proId + ", proName=" + proName + ", proPrize=" + proPrize + "]";
 }
+
+@Override
+public int compareTo(Product o) {
+	// TODO Auto-generated method stub
+	if(this.getProPrize()>o.getProPrize()) return 1;
+	if(this.getProPrize()<o.getProPrize()) return -1;
+	return 0;
+}
+
 
 
 

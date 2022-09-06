@@ -1,0 +1,35 @@
+package com.Assignments.Day4;
+
+public class Employee {
+int salary;
+int id;
+String name;
+public Employee(int salary,int id, String name) {
+	this.id  =id,
+			this.salary =salary;
+	this.name = name;
+}
+public int getSalary() {
+	return salary;
+}
+public void setSalary(int salary) {
+	this.salary = salary;
+}
+public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+@Override
+public String toString() {
+	return "Employee [salary=" + salary + ", id=" + id + ", name=" + name + "]";
+}
+
+}

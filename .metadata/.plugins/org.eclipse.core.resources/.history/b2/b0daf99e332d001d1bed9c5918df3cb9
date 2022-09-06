@@ -1,0 +1,14 @@
+package com.Assignments.Day4;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class EMplooyt {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+List<Employee> e1 = new ArrayList<>();
+e1.add(new Employee(14,50000,"Akarsh"));
+	}
+
+}

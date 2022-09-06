@@ -17,6 +17,10 @@ public class Studentwo {
 	stu.forEach(Student->System.out.println(Student));
 	System.out.println();
 	
+	Collections.sort(stu);
+	stu.forEach(System.out::println);
+	
+	
 	/* Tarditional Method*/
 	/*Collections.sort(stu,new Comparator<Student>() {
 		@Override
@@ -28,7 +32,7 @@ public class Studentwo {
 	});*/
 	
 	
-	Collections.sort(stu,(s1,s2)->s1.getName().compareTo(s2.getName()));
+	/*Collections.sort(stu,(s1,s2)->s1.getName().compareTo(s2.getName()));
 	System.out.println("Sorting based on name");
 	stu.forEach(System.out::println);
 	System.out.println();
@@ -36,6 +40,6 @@ public class Studentwo {
 	
 	stu.sort(Comparator.comparing( Student::getMarks,Comparator.reverseOrder()));
 	System.out.println("After sorting based on marks in desc order");
-	stu.forEach(System.out::println);
+	stu.forEach(System.out::println);*/
 }
 }

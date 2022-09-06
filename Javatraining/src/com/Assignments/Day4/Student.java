@@ -1,6 +1,6 @@
 package com.Assignments.Day4;
 
-public class Student {
+public class Student implements Comparable<Student>{
  int id;
  String name;
 int marks;
@@ -38,6 +38,14 @@ public void setMarks(int marks) {
 @Override
 public String toString() {
 	return "Student [id=" + id + ", name=" + name + ", marks=" + marks + "]";
+}
+
+@Override
+public int compareTo(Student o) {
+	// TODO Auto-generated method stub
+	if(this.marks>o.marks) return 1;
+	else if(this.marks<o.marks) return -1;
+	return 0;
 }
 
 
