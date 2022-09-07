@@ -17,15 +17,33 @@ public class Procomp {
 		pro.add(new Product(42,"Washing Machine",17800));
 		pro.add(new Product(45,"Suitcase",4000));
 		
-		Collections.sort(pro,
+		products.forEach(
+				(Product p1)-> {
+					if(p1.getProdPrice() < 0) {
+						throw new RuntimeException("Price is negative");
+					}
+				}
+		);
+		return products;
+	}
+	public List<Product>getProductsSort() {
+		List<Product> products = new ProductList().getProducts();
+		Collections.sort(products, new Comparator<Product>() {
+			public int compare(Product o1, Product o2) {
+				return Double.compare(o1.getProdPrice(), o2.getProdPrice());
+			}
+		});
+		return products;
+	}
+	int prodSize() {
+		return products.size();
+	}
+	public static void main(String args[]) {	
+		System.out.println("\t\t - Before Sorting -\n" + new ProductList().getProducts() + "\n");
+		System.out.println("\t\t - After Sorting -\n" + new ProductList().getProductsSort());
+	}
+}
 
-					(e1,e2)->e1.getProPrize()-e2.getProPrize());
-		pro.forEach(System.out::println);
-		
-		/*Collections.sort(pro, new Mysort());
-		System.out.println(pro);*/
-}
-}
 /*	class Mysort implements Comparator<Product>{
 
 		@Override
