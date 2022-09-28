@@ -1,0 +1,33 @@
+<p>foreach works!</p>
+<div>
+
+    <h2>HEROS</h2>
+
+    <ul *ngFor = "let h of hero">
+
+    <li>{{h}}</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+    <ul *ngFor = "let p of pdata">
+        <li>{{p.id}}</li>
+        <li>{{p.name}}</li>
+        <li><img src="{{p.image}}" alt="image" height=400px width=400px></li>
+
+
+    </ul>
+
+<div>
+
+    <ul *ngFor = "let d of data">
+
+        <li>{{d.id}}</li>
+
+    </ul>
+
+</div>
